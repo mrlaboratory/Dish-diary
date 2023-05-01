@@ -19,13 +19,21 @@ const Navbar = () => {
         <a className="btn btn-ghost normal-case text-xl">Dish diary</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 font-bold gap-3">
+        <ul className="menu menu-horizontal px-1 font-bold gap-3 text-color">
           <NavLink to='/'>Home</NavLink>
+          <NavLink to='/blog'>Blog</NavLink>
           <NavLink to='/about'>About</NavLink>
+          <NavLink to='/contact'>Contact</NavLink>
+          <NavLink to='/login'>Login</NavLink>
+          <NavLink to='/register'>Register</NavLink>
+          
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end " >
         <button className="btn-primary btn">Login</button>
+        <div className='tooltip tooltip tooltip-left' data-tip="Md Mijanur Rahaman">
+        <img  className='w-12 ml-3 rounded-full border-2 border-[#7E90FE] ' src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="" />
+        </div>
       </div>
     </div>
   );

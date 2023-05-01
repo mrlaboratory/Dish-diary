@@ -17,3 +17,6 @@
 .active {
     @apply text-[#7E90FE]
 }
+.text-color {
+    color : #888d94;
+}
