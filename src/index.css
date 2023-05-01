@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btn-primary{
+    @apply bg-gradient-to-r from-[#7E90FE] to-[#9873FF] px-5 py-3 font-bold text-white rounded-lg border-none outline-none
+}
+.btn-ssm{
+    @apply border font-bold px-4 py-2 rounded-lg bg-[#7E90FE] text-white cursor-pointer outline-none border-none
+}
+
+.btn-outline-sm{
+    @apply border border-[#7E90FE] text-[#7E90FE] font-bold px-4 py-2 rounded-lg hover:bg-[#7E90FE] hover:text-white cursor-pointer duration-200
+}
+
+.active {
+    @apply text-[#7E90FE]
+}
