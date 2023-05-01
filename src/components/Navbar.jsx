@@ -16,7 +16,7 @@ const Navbar = () => {
 
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Dish diary</a>
+        <a className="btn btn-ghost  text-xl uppercase">Dish diary</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-bold gap-3 text-color">
@@ -31,8 +31,8 @@ const Navbar = () => {
       </div>
       <div className="navbar-end " >
         <button className="btn-primary btn">Login</button>
-        <div className='tooltip tooltip tooltip-left' data-tip="Md Mijanur Rahaman">
-        <img  className='w-12 ml-3 rounded-full border-2 border-[#7E90FE] ' src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="" />
+        <div className=' tooltip tooltip-left' data-tip="Md Mijanur Rahaman">
+        <img  className='w-12 ml-3 rounded-full border-2 border-[#FF0000] ' src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="" />
         </div>
       </div>
     </div>

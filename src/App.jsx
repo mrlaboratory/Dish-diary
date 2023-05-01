@@ -11,7 +11,6 @@ const App = () => {
       <div className='container mx-auto'>
         <div>
           <Header></Header>
-          <Banner></Banner>
         </div>
         <div>
           <Outlet></Outlet>
