@@ -2,11 +2,13 @@ import React, {  useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {  AuthContext } from '../components/AuthProvider';
 import { BiShow , BiHide} from 'react-icons/Bi';
-
+import { FcGoogle } from 'react-icons/Fc';
+import { AiFillGithub } from 'react-icons/Ai';
+import { toast } from 'react-hot-toast';
 
 const Login = () => {
 
-  const { user, loginUser } = useContext(AuthContext)
+  const { user, loginUser, loginWithGoogle , loginWithGithub } = useContext(AuthContext)
   const navigate = useNavigate()
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
@@ -30,7 +32,7 @@ const Login = () => {
     loginUser(email, password)
       .then(res => {
         setSuccess('Login successfull')
-        console.log(res)
+        toast.success('Login successfull')
 
       })
       .catch(e => {
@@ -56,7 +58,7 @@ const Login = () => {
     <div className="hero">
       <div className="hero-content flex-col lg:flex-row-reverse">
 
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
+        <div className="card flex-shrink-0 w-full max-w-sm  bg-base-100 ">
           <div className='text-center'>
             <h2 className='text-xl font-bold'> Login</h2>
           </div>
@@ -90,7 +92,15 @@ const Login = () => {
             <div className="form-control mt-6">
               <button type='submit' className="btn btn-primary">Login</button>
             </div>
+            <div>
+                            <h3 className='font-bold text-center'>Or</h3>
+                            <div className='mt-2 flex justify-between items-center border-2 border-red-500 rounded-lg'>
+                                <button onClick={loginWithGoogle} type='button' className='flex justify-center items-center text-xl font-bold  flex-grow px-3 py-2'><FcGoogle className='text-3xl'></FcGoogle> Google</button>
+                                <button onClick={loginWithGithub} type='button' className='flex justify-center items-center text-xl font-bold  flex-grow px-3 py-2'><AiFillGithub className='text-3xl'></AiFillGithub > Github</button>
+                            </div>
+                        </div>
           </form>
+
         </div>
       </div>
     </div>

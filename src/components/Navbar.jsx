@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { AuthContext } from './AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const Navbar = () => {
   const location = useLocation()
+  const {user,signOutUser} = useContext(AuthContext)
+  const userSignOut = () => {
+    signOutUser()
+    .then(res=> {
+      
+    })
+    .catch(e=> {
+      console.log(e)
+    })
+  }
+  
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -16,7 +29,7 @@ const Navbar = () => {
 
           </ul>
         </div>
-        <a className="btn btn-ghost  text-xl uppercase">Dish diary</a>
+        <Link to='/' className="btn btn-ghost  text-xl uppercase">Dish diary</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-bold gap-3 text-color">
@@ -30,10 +43,13 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end " >
-        <button className="btn-primary btn">Login</button>
-        <div className=' tooltip tooltip-left' data-tip="Md Mijanur Rahaman">
-        <img  className='w-12 ml-3 rounded-full border-2 border-[#FF0000] ' src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="" />
+       {user ?  <button onClick={signOutUser} className="btn-primary btn">Logout</button> : <Link className="btn-primary btn" to='/login'>Login</Link>}
+       
+       {
+        user &&  <div className=' tooltip tooltip-left' data-tip={user.displayName}><img  className='w-12 ml-3 rounded-full border-2 border-[#FF0000] ' src={user.photoURL} alt="" />
         </div>
+       }
+        
       </div>
     </div>
   );

@@ -11,7 +11,7 @@
 }
 
 .btn-outline-sm{
-    @apply border border-[#7E90FE] text-[#7E90FE] font-bold px-4 py-2 rounded-lg hover:bg-[#7E90FE] hover:text-white cursor-pointer duration-200
+    @apply border border-[#FF0000] text-[#FF0000] font-bold px-4 py-2 rounded-lg hover:bg-[#FF0000] hover:text-white cursor-pointer duration-200
 }
 
 .active {
