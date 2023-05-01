@@ -1,6 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {  useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../utils/AuthProvider';
+import {  AuthContext } from '../components/AuthProvider';
+import { BiShow , BiHide} from 'react-icons/Bi';
 
 
 const Login = () => {
@@ -9,6 +10,8 @@ const Login = () => {
   const navigate = useNavigate()
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
+
+  const [isShow,setIsShow] = useState(false)
 
 
   const location = useLocation()
@@ -66,11 +69,15 @@ const Login = () => {
               <input required type="email" placeholder="Your email " name='email' className="input input-bordered" />
             </div>
 
-            <div className="form-control">
+            <div className="form-control ">
               <label className="label">
                 <span className="label-text">Password</span>
+
               </label>
-              <input required type="text" name='password' placeholder="Your password" className="input input-bordered" />
+             <div className='relative'>
+             <input required type={`${isShow ? 'text' : 'password'}`} name='password' placeholder="Your password" className="input input-bordered w-full" />
+             <button className='absolute right-0 top-0 h-full pr-1' type='button' onClick={()=> setIsShow(!isShow)}>{isShow ? <BiHide className='text-2xl'></BiHide> : <BiShow className='text-2xl'></BiShow>}</button>
+             </div>
               <label className="label ">
                 <Link to='/register' className="label-text-alt link link-hover">Forgot password?</Link>  or
                 <Link to='/register' className="label-text-alt link link-hover">Create account </Link>
@@ -81,7 +88,7 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button type='submit' className="btn btn-primary">Login</button>
             </div>
           </form>
         </div>

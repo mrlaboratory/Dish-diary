@@ -5,6 +5,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Login from './pages/Login.jsx'
 import Home from './pages/Home.jsx'
+import AuthProvider from './components/AuthProvider.jsx'
 
 
 const router = createBrowserRouter([
@@ -25,5 +26,5 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-<RouterProvider router={router}></RouterProvider>
+<AuthProvider><RouterProvider router={router}></RouterProvider></AuthProvider>
 )
