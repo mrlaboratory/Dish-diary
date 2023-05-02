@@ -7,6 +7,7 @@ import Login from './pages/Login.jsx'
 import Home from './pages/Home.jsx'
 import AuthProvider from './components/AuthProvider.jsx'
 import Register from './pages/Register.jsx'
+import ChefRecipes from './components/ChefRecipes.jsx'
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element : <Register></Register>
+      },
+      {
+        path:'/chefrecipes/:id',
+        element : <ChefRecipes></ChefRecipes>,
+        loader : ({params}) => fetch(`https://dish-diary-server.vercel.app/chefrecipes/${params.id}`)
       }
     ]
   }

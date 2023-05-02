@@ -7,7 +7,7 @@
     @apply bg-gradient-to-r from-[#FF0000] to-[#9873FF] px-5 py-3 font-bold text-white rounded-lg border-none outline-none
 }
 .btn-ssm{
-    @apply border font-bold px-4 py-2 rounded-lg bg-[#7E90FE] text-white cursor-pointer outline-none border-none
+    @apply border font-bold px-4 py-2 rounded-lg bg-gradient-to-r from-[#FF0000] to-[#9873FF] text-white cursor-pointer outline-none border-none
 }
 
 .btn-outline-sm{
