@@ -7,7 +7,7 @@ import GetUpdate from '../components/GetUpdate';
 const Home = () => {
     return (
         <div>
-            
+            <GetUpdate></GetUpdate>
         </div>
     );
 };
