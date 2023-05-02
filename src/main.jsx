@@ -8,13 +8,14 @@ import Home from './pages/Home.jsx'
 import AuthProvider from './components/AuthProvider.jsx'
 import Register from './pages/Register.jsx'
 import ChefRecipes from './components/ChefRecipes.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 
 
 const router = createBrowserRouter([
   {
     path :'/',
     element : <App></App>,
-    errorElement : 'page not found ',
+    errorElement : <ErrorPage></ErrorPage>,
     children : [
       {
         path:'/',
