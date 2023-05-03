@@ -12,12 +12,15 @@ const App = () => {
         <div>
           <Header></Header>
         </div>
-        <div>
-          <Outlet></Outlet>
-        </div>
+
       </div>
-      <div className='container mx-auto'>
-      <Footer></Footer>
+      <div>
+        <Outlet></Outlet>
+      </div>
+      <div className='mt-10 bg-gray-100 '>
+        <div className='container mx-auto'>
+          <Footer></Footer>
+        </div>
       </div>
     </div>
   );

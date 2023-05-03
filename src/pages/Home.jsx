@@ -8,7 +8,19 @@ import Reviews from '../components/Reviews';
 const Home = () => {
     return (
         <div>
-            <Reviews></Reviews>
+            <div className='container mx-auto'>
+                <Banner></Banner>
+                <Chefs></Chefs>
+            </div>
+            <div>
+                <Categories></Categories>
+            </div>
+            <div className='container mx-auto'>
+                <Reviews></Reviews>
+            </div>
+            <div>
+                <GetUpdate></GetUpdate>
+            </div>
         </div>
     );
 };

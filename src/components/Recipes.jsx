@@ -44,7 +44,7 @@ const Recipes = ({ name, image, id, rating, ingredients, cookingMethod }) => {
                                     edit={false}
 
 
-                                />,
+                                />
                             </h4>
 
                         </div>

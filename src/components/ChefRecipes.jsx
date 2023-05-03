@@ -6,20 +6,21 @@ import Spinner from './Spinner';
 
 
 const ChefRecipes = () => {
-    const data = useLoaderData()
+    const recipes = useLoaderData()
     const { chefs } = useContext(AuthContext)
 
 
 
-    if (!data || chefs.length == 0) {
+    if (!recipes || chefs.length == 0) {
+
         return <Spinner></Spinner>
     }
 
-    const chef = chefs.find(ch => ch.chefsId == data[0].chefsId)
-    console.log(chef)
-    console.log(data)
+    const chef = chefs.find(ch => ch.chefId === recipes[0].chefId)
+    // console.log(chef)
+    // console.log(recipes)
     return (
-        <div>
+        <div className='container mx-auto'>
             <div className='grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-5'>
                 <img className='p-10 rounded-lg' src={chef.image} alt="" />
                 <div className='flex flex-col justify-center items-center'>
@@ -39,7 +40,7 @@ const ChefRecipes = () => {
                 <h2 className='text-center text-2xl font-bold my-5'>Here is the Some Recipes of {chef.name}</h2>
                 <div className='grid grid-cols-1  lg:grid-cols-2 gap-3'>
                     {
-                        data.map((recipe, i) => <Recipes key={i} {...recipe}></Recipes>)
+                        recipes.map((recipe, i) => <Recipes key={i} {...recipe}></Recipes>)
                     }
                 </div>
 

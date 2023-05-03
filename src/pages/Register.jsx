@@ -106,8 +106,8 @@ const Register = () => {
                         </div>
                         <div className="form-control">
                             <label className="cursor-pointer label">
-                                <span className="label-text">Accept <Link className='text-[#7E90FE]' to='/terms'>Terms and Conditions</Link> </span>
-                                <input onChange={handleAccepted} type="checkbox" required className="checkbox checkbox-secondary" />
+                                <span className="label-text">Accept <Link className='text-[#D54215]' to='/terms'>Terms and Conditions</Link> </span>
+                                <input onChange={handleAccepted} type="checkbox" required className="checkbox checkbox-secondary " />
                             </label>
                             <label className='label'>
                                 {error && <h3 className='text-red-600 font-bold'>{error}</h3>}

@@ -18,11 +18,11 @@ const Chef = ({ image, name,yearsOfExperience,  numRecipes, likes, chefId}) => {
             <div className='relative'>
                 <img className='w-100 rounded-lg' src={image} alt={name} />
                 <button onClick={handleFavorite} className='absolute top-2 right-2'>
-                    {favorite ? <MdFavorite className='text-3xl text-red-500'></MdFavorite> :
-                        <MdFavoriteBorder className='text-3xl text-red-500'></MdFavoriteBorder>}
+                    {favorite ? <MdFavorite className='text-3xl text-[#D54215]'></MdFavorite> :
+                        <MdFavoriteBorder className='text-3xl text-[#D54215]'></MdFavoriteBorder>}
 
                 </button>
-                <button className='absolute text-blue-500 top-2 left-2 font-bold'><AiFillLike className='text-3xl'> </AiFillLike>{likes}</button>
+                <button className='absolute  top-2 left-2 font-bold text-[#D54215]'><AiFillLike className='text-3xl text-[#D54215]'> </AiFillLike>{likes}</button>
             </div>
             <div>
                 <h3 className='text-xl text-center font-bold'>{name}</h3>

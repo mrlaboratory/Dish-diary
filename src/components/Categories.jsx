@@ -2,7 +2,7 @@ import React from 'react';
 
 const Categories = () => {
     return (
-        <div >
+        <div className='mt-5'>
             <div className='text-center categories z-0'>
                 <div className=' h-full p-10  flex justify-center items-center bg-[#0000005e]'>
                     <div className='pb-20'>
