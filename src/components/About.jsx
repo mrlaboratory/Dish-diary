@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className='container mx-auto my-10'>
+        <div className='container mx-auto py-10'>
                <h2 className='my-5 text-center text-gray-600 font-bold text-3xl'>About</h2>
 
             <p>Welcome to <span className='text-[#D54215] font-bold'>Dish Diary</span> – your go-to source for everything related to cooking and baking! At <span className='text-[#D54215]'>Dish Diary</span>, we're passionate about bringing people together through food. Whether you're a professional chef or a beginner in the kitchen, we've got something for everyone.

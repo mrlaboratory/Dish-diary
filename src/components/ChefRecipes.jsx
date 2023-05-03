@@ -27,10 +27,11 @@ const ChefRecipes = () => {
       
             <div className='headerbg'>
                 <div className=' relative'>
-                    <div className='container mx-auto'>
-                        <div className=' text-gray-600 rounded-lg '>
-                            <Header></Header>
+                <div className=' text-gray-600 rounded-lg '>
+                        <Header></Header>
                         </div>
+                    <div className='container mx-auto'>
+                        
                         <div className='grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-5 '>
                             <div className='relative'>
                                 <img className='p-10 rounded-lg z-10' src={chef.image} alt="" />

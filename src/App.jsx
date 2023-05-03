@@ -7,21 +7,21 @@ import Banner from './components/Banner';
 
 const App = () => {
   return (
-    <div className='bg-gray-100'>
-      <div className='container mx-auto'>
-        <div>
-          <Header></Header>
-        </div>
-
-      </div>
+    <div>
       <div>
-        <Outlet></Outlet>
+        <Header></Header>
       </div>
-      <div className='mt-10 bg-white '>
+      <div className='bg-gray-100'>
         <div className='container mx-auto'>
-          <Footer></Footer>
+
+
         </div>
+        <div>
+          <Outlet></Outlet>
+        </div>
+      
       </div>
+      <Footer></Footer>
     </div>
   );
 };
