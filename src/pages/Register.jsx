@@ -34,7 +34,7 @@ const Register = () => {
         const form = e.target
         const email = form.email.value
         const name = form.name.value
-        const photo = form.photo.value || 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'
+        const photo = form.photo.value || 'https://mrlaboratory.github.io/img/user.png'
         const password1 = form.password1.value
         const password2 = form.password2.value
 
@@ -74,10 +74,10 @@ const Register = () => {
             <div className="hero-content flex-col lg:flex-row-reverse">
 
                 <div className="card flex-shrink-0 w-full max-w-sm ">
-                    <div className='text-center'>
+                    <div className='text-center py-3'>
                         <h2 className='text-xl font-bold'> Create new Accont</h2>
                     </div>
-                    <form onSubmit={signUpUser} className="card-body w-96">
+                    <form onSubmit={signUpUser} className="card-body p-0 w-full sm:w-96">
                         <div className="form-control">
 
                             <input required type="text" placeholder="Your full name " name='name' className="input input-bordered" />

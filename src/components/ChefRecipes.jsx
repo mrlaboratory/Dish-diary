@@ -7,6 +7,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 
+
 const ChefRecipes = () => {
     const recipes = useLoaderData()
     const { chefs } = useContext(AuthContext)
@@ -23,10 +24,11 @@ const ChefRecipes = () => {
     // console.log(recipes)
     return (
         <div className='bg-gray-100'>
+      
             <div className='headerbg'>
                 <div className=' relative'>
                     <div className='container mx-auto'>
-                        <div className=' text-gray-600 rounded-lg overflow-hidden'>
+                        <div className=' text-gray-600 rounded-lg '>
                             <Header></Header>
                         </div>
                         <div className='grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-5 '>
@@ -34,9 +36,9 @@ const ChefRecipes = () => {
                                 <img className='p-10 rounded-lg z-10' src={chef.image} alt="" />
                                
                             </div>
-                            <div className='flex flex-col justify-center items-center text-gray-600 z-10'>
-                                <h2 className='text-5xl font-bold uppercase'>{chef.name}</h2>
-                                <p className=' text-xl text-center text-gray-600'>{chef.description}</p>
+                            <div className='flex flex-col justify-center items-center text-gray-600 z-10 bg-[#ffffff59] p-3 rounded-lg'>
+                                <h2 className='text-2xl md:text-5xl font-bold uppercase'>{chef.name}</h2>
+                                <p className=' text-xl text-center text-gray-600 mt-5'>{chef.description}</p>
                                 <div className='p-5 rounded-lg bg-gray-100 text-gray-600 mt-5'>
                                     <h3 className='font-bold text-xl'>Experience : {chef.yearsOfExperience} Year</h3>
                                     <h3 className='font-bold text-xl'>Recipes : {chef.numRecipes} </h3>
@@ -51,7 +53,7 @@ const ChefRecipes = () => {
                 </div>
             </div>
 
-            <div className='mt-5 container mx-auto text-gray-100'>
+            <div className='mt-5 container mx-auto text-gray-100 p-3'>
                 <h2 className='text-center text-2xl font-bold my-5 text-gray-600'>Here is the Some Recipes of {chef.name}</h2>
                 <div className='grid grid-cols-1  lg:grid-cols-2 gap-3'>
                     {

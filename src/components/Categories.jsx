@@ -15,7 +15,7 @@ const Categories = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 -mt-36 z-10 '>
             <div className='p-5 flex justify-center items-center '>
                     <div className='relative bg-black rounded-full overflow-hidden w-[250px] h-[250px]  border-8 border-white flex justify-center items-center'>
-                        <img className='opacity-80   cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="/public/cat/cat4.jpg" alt="" />
+                        <img className='opacity-80   cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="https://mrlaboratory.github.io/img/cat/cat4.jpg" alt="" />
                      
                             <div className=' z-10'>
                                 <h2 className='text-center font-bold text-xl text-white'>Main Dish
@@ -28,7 +28,7 @@ const Categories = () => {
             </div>
             <div className='p-5 flex justify-center items-center '>
                     <div className='relative bg-black rounded-full overflow-hidden w-[250px] h-[250px]  border-8 border-white flex justify-center items-center'>
-                        <img className='opacity-80   cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="/public/cat/cat3.jpg" alt="" />
+                        <img className='opacity-80   cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="https://mrlaboratory.github.io/img/cat/cat3.jpg" alt="" />
                      
                             <div className=' z-10'>
                                 <h2 className='text-center font-bold text-xl text-white'>Appetizers</h2>
@@ -40,7 +40,7 @@ const Categories = () => {
             </div>
             <div className='p-5 flex justify-center items-center '>
                     <div className='relative bg-black rounded-full overflow-hidden w-[250px] h-[250px]  border-8 border-white flex justify-center items-center'>
-                        <img className='opacity-80   cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="/public/cat/cat2.jpg" alt="" />
+                        <img className='opacity-80   cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="https://mrlaboratory.github.io/img/cat/cat2.jpg" alt="" />
                      
                             <div className=' z-10'>
                                 <h2 className='text-center font-bold text-xl text-white'>Drink Recipes</h2>
@@ -54,7 +54,7 @@ const Categories = () => {
 
             <div className='p-5 flex justify-center items-center '>
                     <div className='relative bg-black rounded-full overflow-hidden w-[250px] h-[250px]  border-8 border-white flex justify-center items-center'>
-                        <img className='opacity-80  cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="/public/cat/cat1.jpg" alt="" />
+                        <img className='opacity-80  cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="https://mrlaboratory.github.io/img/cat/cat1.jpg" alt="" />
                      
                             <div className=' z-10'>
                                 <h2 className='text-center font-bold text-xl text-white'>Breakfast</h2>

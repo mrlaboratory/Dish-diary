@@ -62,7 +62,7 @@ const Login = () => {
           <div className='text-center'>
             <h2 className='text-xl font-bold'> Login</h2>
           </div>
-          <form onSubmit={sigininuser} className="card-body w-96">
+          <form onSubmit={sigininuser} className="card-body p-0 w-full sm:w-96">
 
             <div className="form-control">
               <label className="label">

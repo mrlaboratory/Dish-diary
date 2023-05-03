@@ -29,7 +29,7 @@ const Recipes = ({ name, image, id, rating, ingredients, cookingMethod }) => {
                     {/* <button className='absolute text-blue-500 top-2 left-2 font-bold'><AiFillLike className='text-3xl'> </AiFillLike></button> */}
                 </div>
                 <div>
-                    <h3 className='text-xl text-center font-bold'>{name}</h3>
+                    <h3 className='text-xl text-center font-bold text-gray-600'>{name}</h3>
                     <div className=' border-2  p-2 my-2 text-color'>
                         <div className='flex justify-center items-center'>
 

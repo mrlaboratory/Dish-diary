@@ -22,7 +22,7 @@ const Chef = ({ image, name,yearsOfExperience,  numRecipes, likes, chefId}) => {
                         <MdFavoriteBorder className='text-3xl text-[#D54215]'></MdFavoriteBorder>}
 
                 </button>
-                <div className=' absolute top-0 left-0 bg-gradient-to-t  from-white to-transparent w-full h-full  '>
+                <div className=' absolute bottom-0 left-0 bg-gradient-to-t  from-white to-transparent w-full h-1/2  '>
 
                 </div>
                 <button className='absolute  top-2 left-2 font-bold text-[#D54215]'><AiFillLike className='text-3xl text-[#D54215]'> </AiFillLike>{likes}</button>

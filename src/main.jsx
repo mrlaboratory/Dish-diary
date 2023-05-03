@@ -10,6 +10,9 @@ import Register from './pages/Register.jsx'
 import ChefRecipes from './components/ChefRecipes.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
 import PrivateRoute from './components/PriveteRoute.jsx'
+import Blog from './components/Blog.jsx'
+import About from './components/About.jsx'
+import Contact from './components/Contact.jsx'
 
 
 const router = createBrowserRouter([
@@ -29,6 +32,18 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element : <Register></Register>
+      },
+      {
+        path: '/blog',
+        element : <Blog></Blog>
+      },
+      {
+        path: '/about',
+        element : <About></About>
+      },
+      {
+        path: '/contact',
+        element : <Contact></Contact>
       }
     
     ]
