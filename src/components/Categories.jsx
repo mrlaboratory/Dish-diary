@@ -7,13 +7,13 @@ const Categories = () => {
                 <div className=' h-full p-10  flex justify-center items-center bg-[#0000005e]'>
                     <div className='pb-20'>
                         <h2 className='font-bold text-3xl '>Popular Categories</h2>
-                        <p className='mt-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                        <p className='mt-2'>Looking for nutritious and delicious dishes? Our Healthy Options category features a variety of recipes that cater to different dietary needs and preferences.</p>
                     </div>
                 </div>
 
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 -mt-36 z-10 '>
-            <div className='p-5 flex justify-center items-center '>
+            <div data-aos="zoom-in" className='p-5 flex justify-center items-center '>
                     <div className='relative bg-black rounded-full overflow-hidden w-[250px] h-[250px]  border-8 border-white flex justify-center items-center'>
                         <img className='opacity-80   cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="https://mrlaboratory.github.io/img/cat/cat4.jpg" alt="" />
                      
@@ -26,7 +26,7 @@ const Categories = () => {
 
                     </div>
             </div>
-            <div className='p-5 flex justify-center items-center '>
+            <div data-aos="zoom-in" className='p-5 flex justify-center items-center '>
                     <div className='relative bg-black rounded-full overflow-hidden w-[250px] h-[250px]  border-8 border-white flex justify-center items-center'>
                         <img className='opacity-80   cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="https://mrlaboratory.github.io/img/cat/cat3.jpg" alt="" />
                      
@@ -38,7 +38,7 @@ const Categories = () => {
 
                     </div>
             </div>
-            <div className='p-5 flex justify-center items-center '>
+            <div data-aos="zoom-in" className='p-5 flex justify-center items-center '>
                     <div className='relative bg-black rounded-full overflow-hidden w-[250px] h-[250px]  border-8 border-white flex justify-center items-center'>
                         <img className='opacity-80   cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="https://mrlaboratory.github.io/img/cat/cat2.jpg" alt="" />
                      
@@ -52,7 +52,7 @@ const Categories = () => {
             </div>
 
 
-            <div className='p-5 flex justify-center items-center '>
+            <div data-aos="zoom-in" className='p-5 flex justify-center items-center '>
                     <div className='relative bg-black rounded-full overflow-hidden w-[250px] h-[250px]  border-8 border-white flex justify-center items-center'>
                         <img className='opacity-80  cursor-pointer absolute scale-150 bottom-0 w-full h-full left-0 object-cover transition-transform duration-500 ease-in-out transform hover:scale-100 ' src="https://mrlaboratory.github.io/img/cat/cat1.jpg" alt="" />
                      

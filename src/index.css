@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html {
+  scroll-behavior: smooth;
+}
 
 .btn-primary{
     @apply bg-gradient-to-r from-[#D54215] to-[#D54215] px-5 py-3 font-bold text-white rounded-lg border-none outline-none
@@ -51,10 +53,18 @@
   .headerbg{
     width: 100%;
     /* height: 300px; */
-    background-image: url('../public/header.png');
+    background-image: url('../public/bg.svg');
     object-fit: cover;
     background-size: cover;
     background-position: top;
     background-color: rgba(0, 0, 0, 0.34);
     color: white;
+  }
+  .LazyLoad {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+  
+  .is-visible {
+    opacity: 1;
   }

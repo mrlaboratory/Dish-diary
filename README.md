@@ -1,6 +1,6 @@
 #Dish diary Project 
 
-## [Live link ](https://www.example.com)
+## [Live link ](https://dish-diary.web.app/) - https://dish-diary.web.app/
 
 ## Section list 
 - Navigation 

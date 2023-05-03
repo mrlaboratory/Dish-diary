@@ -51,6 +51,7 @@ const router = createBrowserRouter([
   {
     path:'/chefrecipes/:id',
     element : <PrivateRoute><ChefRecipes></ChefRecipes></PrivateRoute>,
+    errorElement : <ErrorPage></ErrorPage>,
     loader : ({params}) => fetch(`https://dish-diary-server.vercel.app/chefrecipes/${params.id}`)
   }
 ])

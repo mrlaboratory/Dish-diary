@@ -10,7 +10,7 @@ import { toast } from 'react-hot-toast';
 
 const Register = () => {
 
-    const { user, createUser,loginWithGoogle , loginWithGithub} = useContext(AuthContext)
+    const { user, createUser,loginWithGoogle , loginWithGithub, path} = useContext(AuthContext)
     const location = useLocation()
     const [accepted, setAccepted] = useState(false)
     const [error, setError] = useState('')
@@ -66,7 +66,7 @@ const Register = () => {
     useEffect(() => {
         if (user) {
             console.log(1)
-            navigate(from, { replace: true })
+            navigate(path, { replace: true })
         }
     }, [user, from])
     return (

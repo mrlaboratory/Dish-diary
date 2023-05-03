@@ -1,10 +1,18 @@
 import React from 'react';
+import ReactToPdf from "react-to-pdf"
 
+const ref = React.createRef();
+const options = {
+    orientation: 'portrait',
+    unit: 'in',
+    format: [8.5, 11],
+  };
 const Blog = () => {
     return (
-        <div className='container mx-auto flex justify-center items-center'>
 
-            <div className='grid grid-cols-1 md:grid-cols-2'>
+        <div  className='p-3 container mx-auto flex flex-col justify-center items-center w-full h-full' ref={ref}>
+       
+            <div className='grid grid-cols-1 md:grid-cols-2 ' >
 
                 <div className='w-full sm:w-[500px] mt-10'>
 
@@ -60,6 +68,12 @@ const Blog = () => {
                     <img className='w-full p-5' src="/qa.png" alt="" />
                 </div>
             </div>
+            <ReactToPdf targetRef={ref} filename="blog.pdf" options={options} >
+                {({ toPdf }) => (
+                        <button onClick={toPdf} className='my-10 btn-primary btn'>Genrate PDF</button>
+                )}
+            </ReactToPdf>
+       
         </div>
     );
 };

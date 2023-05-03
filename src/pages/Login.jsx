@@ -81,7 +81,7 @@ const Login = () => {
              <button className='absolute right-0 top-0 h-full pr-1' type='button' onClick={()=> setIsShow(!isShow)}>{isShow ? <BiHide className='text-2xl'></BiHide> : <BiShow className='text-2xl'></BiShow>}</button>
              </div>
               <label className="label ">
-                <Link to='/register' className="label-text-alt link link-hover">Forgot password?</Link>  or
+                <Link to='/forget' className="label-text-alt link link-hover">Forgot password?</Link>  or
                 <Link to='/register' className="label-text-alt link link-hover">Create account </Link>
               </label>
               <label className='label'>

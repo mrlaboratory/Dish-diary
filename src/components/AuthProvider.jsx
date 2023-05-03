@@ -4,20 +4,27 @@ import app from '../firebase.config';
 import { Toaster, toast } from 'react-hot-toast';
 const auth = getAuth(app)
 export const AuthContext = createContext()
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const AuthProvider = ({ children }) => {
 
     const [chefs, setChefs] = useState([])
-   
     useEffect(() => {
         fetch('https://dish-diary-server.vercel.app/chef')
             .then(res => res.json())
             .then(d => setChefs(d.slice(0, 9)))
     }, [])
 
-
+    useEffect(() => {
+        AOS.init({
+          duration: 1000,
+          easing: 'ease-out'
+        });
+      }, []);
+      
+    const [path,setPath] = useState('/')
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
     const googleProvider = new GoogleAuthProvider()
@@ -70,6 +77,8 @@ const AuthProvider = ({ children }) => {
         loading,
         loginWithGoogle,
         loginWithGithub,
+        path,
+        setPath,
 
 
 

@@ -14,10 +14,10 @@ const Home = () => {
                 
             </div>
          
-            <div>
+            <div className='my-10'>
                 <Categories></Categories>
             </div>
-            <div className='container mx-auto'>
+            <div className='container mx-auto my-10'>
                 <Reviews></Reviews>
             </div>
             <div>
