@@ -28,13 +28,14 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element : <Register></Register>
-      },
-      {
-        path:'/chefrecipes/:id',
-        element : <ChefRecipes></ChefRecipes>,
-        loader : ({params}) => fetch(`https://dish-diary-server.vercel.app/chefrecipes/${params.id}`)
       }
+    
     ]
+  },
+  {
+    path:'/chefrecipes/:id',
+    element : <ChefRecipes></ChefRecipes>,
+    loader : ({params}) => fetch(`https://dish-diary-server.vercel.app/chefrecipes/${params.id}`)
   }
 ])
 

@@ -33,7 +33,7 @@ const Reviews = () => {
 
                     {
                         reviewData.map((item, i) => <SwiperSlide key={i}>
-                            <div className='text-center bg-gray-100 rounded-lg p-5'>
+                            <div className='text-center bg-white rounded-lg p-5'>
                                 <div className='w-full flex justify-center items-center'>
                                     <div className='w-[80px] h-[80px] rounded-full overflow-hidden border-2 border-[#D54215]'>
                                         <img className='w-full h-full' src={item.image_url} alt="" />

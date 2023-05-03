@@ -2,13 +2,16 @@ import React from 'react';
 import errorImage from '/error.jpg'
 import Header from '../components/Header';
 import { Link, useRouteError } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const ErrorPage = () => {
     const error = useRouteError()
     console.log(error)
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto '>
+            <div className=''>
             <Header></Header>
+            </div>
             <div className='w-full  p-5 flex justify-center items-center'> 
             <div className='flex justify-center items-center'><img className='w-full md:w-2/4 rounded-lg' src={errorImage} alt="" /></div>
             </div>
@@ -19,6 +22,7 @@ const ErrorPage = () => {
             Back to homepage
           </Link>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

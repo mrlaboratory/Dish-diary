@@ -3,7 +3,7 @@ import React from 'react';
 const GetUpdate = () => {
     return (
         <div className='getupdate'>
-            <div className='flex justify-center items-center p-5 w-full h-full bg-gradient-to-t from-white to-transparent'>
+            <div className='flex justify-center items-center p-5 w-full h-full bg-gradient-to-t from-gray-100 to-transparent'>
                 <div>
                     <h2 className='text-center text-5xl font-bold text-gray-500'>Get update <br /> delicious recipes everyday!</h2>
                     <div className='flex justify-center item-center text-black'>

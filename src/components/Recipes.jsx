@@ -15,10 +15,9 @@ const Recipes = ({ name, image, id, rating, ingredients, cookingMethod }) => {
         toast.success('Added to favorite list')
         setFavorite(true)
     }
-
     return (
 
-        <div className='p-3 rounded-lg bg-gray-100 relative flex flex-col justify-between'>
+        <div className='p-3 rounded-lg bg-white relative flex flex-col justify-between'>
             <div>
                 <div className='relative'>
                     <img className='w-100 rounded-lg' src={image} alt='' />

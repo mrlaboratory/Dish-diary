@@ -14,14 +14,17 @@ const Chef = ({ image, name,yearsOfExperience,  numRecipes, likes, chefId}) => {
         setFavorite(!favorite)
     }
     return (
-        <div className='p-3 rounded-lg bg-gray-100'>
+        <div className='p-3 rounded-lg bg-white'>
             <div className='relative'>
                 <img className='w-100 rounded-lg' src={image} alt={name} />
-                <button onClick={handleFavorite} className='absolute top-2 right-2'>
+                <button onClick={handleFavorite} className='absolute top-2 right-2 z-10'>
                     {favorite ? <MdFavorite className='text-3xl text-[#D54215]'></MdFavorite> :
                         <MdFavoriteBorder className='text-3xl text-[#D54215]'></MdFavoriteBorder>}
 
                 </button>
+                <div className=' absolute top-0 left-0 bg-gradient-to-t  from-white to-transparent w-full h-full  '>
+
+                </div>
                 <button className='absolute  top-2 left-2 font-bold text-[#D54215]'><AiFillLike className='text-3xl text-[#D54215]'> </AiFillLike>{likes}</button>
             </div>
             <div>

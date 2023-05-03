@@ -7,7 +7,7 @@ import Banner from './components/Banner';
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-gray-100'>
       <div className='container mx-auto'>
         <div>
           <Header></Header>
@@ -17,7 +17,7 @@ const App = () => {
       <div>
         <Outlet></Outlet>
       </div>
-      <div className='mt-10 bg-gray-100 '>
+      <div className='mt-10 bg-white '>
         <div className='container mx-auto'>
           <Footer></Footer>
         </div>
