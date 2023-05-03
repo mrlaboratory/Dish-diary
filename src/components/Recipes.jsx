@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/Md';
 import { AiFillLike } from 'react-icons/Ai';
 import { Link } from 'react-router-dom';
@@ -6,24 +6,35 @@ import { toast } from 'react-hot-toast';
 
 import ReactStars from "react-rating-stars-component";
 import { render } from "react-dom";
+import { addToDb, getDbData } from '../utils/db';
 
 
 
 
 const Recipes = ({ name, image, id, rating, ingredients, cookingMethod }) => {
     const [favorite, setFavorite] = useState(false)
-    const handleFavorite = () => {
+    const handleFavorite = (id) => {
         toast.success('Added to favorite list')
         setFavorite(true)
+        addToDb(id)
     }
+    useEffect(() => {
+        const dbData = getDbData()
+        for (const dd in dbData) {
+            if (dd == id) {
+                setFavorite(true)
+            }
+        }
+    }, [])
+
     return (
 
         <div className='p-3 rounded-lg bg-white relative flex flex-col justify-between border border-gray-200'>
             <div>
                 <div className='relative'>
-                   
-                        <img className='w-100 rounded-lg' src={image} alt='' />
-                   
+
+                    <img className='w-100 rounded-lg' src={image} alt='' />
+
                     <button className='absolute top-2 right-2'>
                         {favorite ? <MdFavorite className='text-3xl text-red-500'></MdFavorite> :
                             <MdFavoriteBorder className='text-3xl text-red-500'></MdFavoriteBorder>}
@@ -73,7 +84,7 @@ const Recipes = ({ name, image, id, rating, ingredients, cookingMethod }) => {
                 </div>
             </div>
             <div className='items-end'>
-                <button onClick={handleFavorite} disabled={favorite} className='btn-outline-sm w-full mt-2 disabled:opacity-50 disabled:cursor-default'>
+                <button onClick={() => handleFavorite(id)} disabled={favorite} className='btn-outline-sm w-full mt-2 disabled:opacity-50 disabled:cursor-default'>
                     {favorite ? "Added" : 'Add to favorite'}
 
                 </button>
