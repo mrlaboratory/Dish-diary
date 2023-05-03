@@ -58,7 +58,7 @@ const Login = () => {
     <div className="hero">
       <div className="hero-content flex-col lg:flex-row-reverse">
 
-        <div className="card flex-shrink-0 w-full max-w-sm  bg-base-100 ">
+        <div className="card flex-shrink-0 w-full max-w-sm   ">
           <div className='text-center'>
             <h2 className='text-xl font-bold'> Login</h2>
           </div>
@@ -95,8 +95,8 @@ const Login = () => {
             <div>
                             <h3 className='font-bold text-center'>Or</h3>
                             <div className='mt-2 flex justify-between items-center border-2 border-red-500 rounded-lg'>
-                                <button onClick={loginWithGoogle} type='button' className='flex justify-center items-center text-xl font-bold  flex-grow px-3 py-2'><FcGoogle className='text-3xl'></FcGoogle> Google</button>
-                                <button onClick={loginWithGithub} type='button' className='flex justify-center items-center text-xl font-bold  flex-grow px-3 py-2'><AiFillGithub className='text-3xl'></AiFillGithub > Github</button>
+                                <button onClick={loginWithGoogle} type='button' className='flex justify-center items-center text-xl font-bold  flex-grow px-3 py-2'><FcGoogle className='text-2xl'></FcGoogle> Google</button>
+                                <button onClick={loginWithGithub} type='button' className='flex justify-center items-center text-xl font-bold  flex-grow px-3 py-2'><AiFillGithub className='text-2xl'></AiFillGithub > Github</button>
                             </div>
                         </div>
           </form>

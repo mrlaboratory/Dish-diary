@@ -9,6 +9,7 @@ import AuthProvider from './components/AuthProvider.jsx'
 import Register from './pages/Register.jsx'
 import ChefRecipes from './components/ChefRecipes.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
+import PrivateRoute from './components/PriveteRoute.jsx'
 
 
 const router = createBrowserRouter([
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
   },
   {
     path:'/chefrecipes/:id',
-    element : <ChefRecipes></ChefRecipes>,
+    element : <PrivateRoute><ChefRecipes></ChefRecipes></PrivateRoute>,
     loader : ({params}) => fetch(`https://dish-diary-server.vercel.app/chefrecipes/${params.id}`)
   }
 ])
