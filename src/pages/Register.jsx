@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import { updateProfile } from 'firebase/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../components/AuthProvider';
 import { BiShow, BiHide } from 'react-icons/Bi';
 import { FcGoogle } from 'react-icons/Fc';
 import { AiFillGithub } from 'react-icons/Ai';
 import { toast } from 'react-hot-toast';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Register = () => {
 

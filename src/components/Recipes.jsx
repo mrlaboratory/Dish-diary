@@ -18,7 +18,7 @@ const Recipes = ({ name, image, id, rating, ingredients, cookingMethod }) => {
     }
     return (
 
-        <div className='p-3 rounded-lg bg-white relative flex flex-col justify-between'>
+        <div className='p-3 rounded-lg bg-white relative flex flex-col justify-between border border-gray-200'>
             <div>
                 <div className='relative'>
                    
@@ -32,7 +32,7 @@ const Recipes = ({ name, image, id, rating, ingredients, cookingMethod }) => {
                     {/* <button className='absolute text-blue-500 top-2 left-2 font-bold'><AiFillLike className='text-3xl'> </AiFillLike></button> */}
                 </div>
                 <div>
-                    <h3 className='text-xl text-center font-bold text-gray-600'>{name}</h3>
+                    <h3 className='text-xl text-center font-bold text-gray-600 mt-3'>{name}</h3>
                     <div className='   p-2 my-2 text-color'>
                         <div className='flex justify-center items-center'>
 

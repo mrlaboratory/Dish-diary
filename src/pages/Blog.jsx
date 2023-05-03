@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactToPdf from "react-to-pdf"
 
+
 const ref = React.createRef();
 const options = {
     orientation: 'portrait',
@@ -14,7 +15,8 @@ const Blog = () => {
        
             <div className='grid grid-cols-1 md:grid-cols-2 ' >
 
-                <div className='w-full sm:w-[500px] mt-10'>
+                <div className='w-full sm:w-[500px] mt-10' >
+                   
 
                     <h2 className='my-5 text-center text-gray-600 font-bold text-3xl'>Question and Answer</h2>
 

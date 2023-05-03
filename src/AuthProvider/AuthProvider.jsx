@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
-import app from '../firebase.config';
+import app from '../utils/firebase.config';
 import { Toaster, toast } from 'react-hot-toast';
 const auth = getAuth(app)
 export const AuthContext = createContext()
@@ -23,7 +23,7 @@ const AuthProvider = ({ children }) => {
           easing: 'ease-out'
         });
       }, []);
-      
+
     const [path,setPath] = useState('/')
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)

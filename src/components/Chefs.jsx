@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Chef from './Chef';
-import { AuthContext } from './AuthProvider';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+
 
 const Chefs = () => {
  const {chefs} = useContext(AuthContext)

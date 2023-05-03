@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { AuthContext } from './AuthProvider';
+
 import { toast } from 'react-hot-toast';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Navbar = () => {
   const location = useLocation()

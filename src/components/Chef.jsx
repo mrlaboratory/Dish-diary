@@ -15,7 +15,7 @@ const Chef = ({ image, name, yearsOfExperience, numRecipes, likes, chefId }) => 
         setFavorite(!favorite)
     }
     return (
-        <div className='p-3 rounded-lg bg-white'>
+        <div className='p-3 rounded-lg bg-white border-2 border-gray-200'>
             <div className='relative'>
                 <LazyLoad>
                     <img className='w-100 rounded-lg' src={image} alt={name} />

@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { AuthContext } from './AuthProvider';
-import Recipes from './Recipes';
-import Spinner from './Spinner';
-import Header from './Header';
-import Footer from './Footer';
-import LazyLoad from 'react-lazy-load';
+import Recipes from '../components/Recipes';
+import Spinner from '../components/Spinner';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+
 
 
 
@@ -35,7 +35,7 @@ const ChefRecipes = () => {
     return (
         <div className='bg-gray-100'>
 
-            <div className='headerbg'>
+            <div className='headerbg border-b-2 border-gray-200'>
                 <div className=' relative'>
                     <div className=' text-gray-600 rounded-lg '>
                         <Header></Header>
@@ -43,14 +43,14 @@ const ChefRecipes = () => {
                     <div className='container mx-auto '>
 
                         <div className='grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-5 '>
-                            <div className='relative h-full flex justify-center  items-end '>
+                            <div data-aos="fade-right" className='relative h-full flex justify-center  items-end '>
 
                                 <img className=' rounded-lg z-10' src={chef.image} alt="" />
 
 
 
                             </div>
-                            <div className='p-5'>
+                            <div data-aos="fade-left" className='p-5'>
                                 <div className='flex  flex-col  justify-center items-center text-white z-10 bg-[#ffffff59] p-3 rounded-lg'>
                                     <h2 className='text-2xl lg:text-5xl font-bold uppercase'>{chef.name}</h2>
                                     <p className=' text-xl text-center  mt-5'>{chef.description}</p>
@@ -72,7 +72,7 @@ const ChefRecipes = () => {
 
             <div className='mt-5 container mx-auto text-gray-100 p-3'>
                 <h2 className='text-center text-2xl font-bold my-5 text-gray-600'>Here is the Some Recipes of {chef.name}</h2>
-                <div className='grid grid-cols-1  lg:grid-cols-2 gap-3'>
+                <div className='grid grid-cols-1  lg:grid-cols-2 gap-5'>
                     {
                         recipes.map((recipe, i) => <Recipes key={i} {...recipe}></Recipes>)
                     }
