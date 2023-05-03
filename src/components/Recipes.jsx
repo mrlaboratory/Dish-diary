@@ -6,6 +6,7 @@ import { toast } from 'react-hot-toast';
 
 import ReactStars from "react-rating-stars-component";
 import { render } from "react-dom";
+import LazyLoad from 'react-lazy-load';
 
 
 
@@ -20,7 +21,9 @@ const Recipes = ({ name, image, id, rating, ingredients, cookingMethod }) => {
         <div className='p-3 rounded-lg bg-white relative flex flex-col justify-between'>
             <div>
                 <div className='relative'>
-                    <img className='w-100 rounded-lg' src={image} alt='' />
+                    <LazyLoad>
+                        <img className='w-100 rounded-lg' src={image} alt='' />
+                    </LazyLoad>
                     <button className='absolute top-2 right-2'>
                         {favorite ? <MdFavorite className='text-3xl text-red-500'></MdFavorite> :
                             <MdFavoriteBorder className='text-3xl text-red-500'></MdFavoriteBorder>}
@@ -50,7 +53,7 @@ const Recipes = ({ name, image, id, rating, ingredients, cookingMethod }) => {
                         <div>
                             <h3 className='text-xl font-bold border-b-2 border-gray-400 pb-1'>Ingredients</h3>
                             <ul>
-                                {ingredients?.map((item, i) => <li key={i}>{i+1}.  {item}</li>)}
+                                {ingredients?.map((item, i) => <li key={i}>{i + 1}.  {item}</li>)}
 
                             </ul>
 
@@ -58,7 +61,7 @@ const Recipes = ({ name, image, id, rating, ingredients, cookingMethod }) => {
                         <div className='mt-3'>
                             <h3 className='text-xl font-bold border-b-2 border-gray-400 pb-1'>Cooking Method</h3>
                             <ul>
-                                {cookingMethod?.map((item, i) => <li key={i}>{i+1}.  {item}</li>)}
+                                {cookingMethod?.map((item, i) => <li key={i}>{i + 1}.  {item}</li>)}
 
                             </ul>
 

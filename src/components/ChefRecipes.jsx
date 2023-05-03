@@ -10,9 +10,11 @@ import Footer from './Footer';
 
 const ChefRecipes = () => {
     const recipes = useLoaderData()
-    const { chefs } = useContext(AuthContext)
+    const { chefs, loading } = useContext(AuthContext)
 
-
+    if (loading) {
+        return <Spinner></Spinner>
+    }
 
     if (!recipes || chefs.length == 0) {
 
@@ -24,18 +26,18 @@ const ChefRecipes = () => {
     // console.log(recipes)
     return (
         <div className='bg-gray-100'>
-      
+
             <div className='headerbg'>
                 <div className=' relative'>
-                <div className=' text-gray-600 rounded-lg '>
+                    <div className=' text-gray-600 rounded-lg '>
                         <Header></Header>
-                        </div>
+                    </div>
                     <div className='container mx-auto'>
-                        
+
                         <div className='grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-5 '>
                             <div className='relative'>
                                 <img className='p-10 rounded-lg z-10' src={chef.image} alt="" />
-                               
+
                             </div>
                             <div className='flex flex-col justify-center items-center text-gray-600 z-10 bg-[#ffffff59] p-3 rounded-lg'>
                                 <h2 className='text-2xl md:text-5xl font-bold uppercase'>{chef.name}</h2>

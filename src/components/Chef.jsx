@@ -3,9 +3,10 @@ import { toast } from 'react-hot-toast';
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/Md';
 import { AiFillLike } from 'react-icons/Ai';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 
-const Chef = ({ image, name,yearsOfExperience,  numRecipes, likes, chefId}) => {
+const Chef = ({ image, name, yearsOfExperience, numRecipes, likes, chefId }) => {
     const [favorite, setFavorite] = useState(false)
     const handleFavorite = () => {
         if (!favorite) {
@@ -16,7 +17,10 @@ const Chef = ({ image, name,yearsOfExperience,  numRecipes, likes, chefId}) => {
     return (
         <div className='p-3 rounded-lg bg-white'>
             <div className='relative'>
-                <img className='w-100 rounded-lg' src={image} alt={name} />
+                <LazyLoad>
+                    <img className='w-100 rounded-lg' src={image} alt={name} />
+                </LazyLoad>
+
                 <button onClick={handleFavorite} className='absolute top-2 right-2 z-10'>
                     {favorite ? <MdFavorite className='text-3xl text-[#D54215]'></MdFavorite> :
                         <MdFavoriteBorder className='text-3xl text-[#D54215]'></MdFavoriteBorder>}
@@ -35,7 +39,7 @@ const Chef = ({ image, name,yearsOfExperience,  numRecipes, likes, chefId}) => {
                         <h4 className='text-xl font-semibold'>{yearsOfExperience} Year experience</h4>
 
                     </div>
-                    <div  className='flex justify-center items-center'>
+                    <div className='flex justify-center items-center'>
                         {/* <img className='w-4/12' src="https://mrlaboratory.github.io/img/dish-diary/cook-book.png" alt="" /> */}
                         <h4 className='text-xl font-semibold'>{numRecipes} Recipes</h4>
                     </div>
@@ -45,7 +49,7 @@ const Chef = ({ image, name,yearsOfExperience,  numRecipes, likes, chefId}) => {
             </div>
             <Link to={`/chefrecipes/${chefId}`} >
                 <button className='btn-ssm w-full'>View Recipes </button>
-                </Link>
+            </Link>
 
         </div>
     );
