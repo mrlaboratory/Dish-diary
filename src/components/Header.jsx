@@ -3,8 +3,10 @@ import Navbar from './Navbar';
 
 const Header = () => {
     return (
-        <div>
-           <Navbar></Navbar>
+        <div className='border-b-2 border-gray-200 bg-white'>
+            <div className='container mx-auto'>
+                <Navbar></Navbar>
+            </div>
         </div>
     );
 };
