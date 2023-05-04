@@ -2,6 +2,16 @@
 
 ## [Live link ](https://dish-diary.web.app/) - https://dish-diary.web.app/
 
+## Functionalities 
+- Anyone can register and login 
+- User can see some chefs data and category in our home page
+- Have subscription section go getUpdate recipes email
+- User can add chefs to favorite list 
+- User can add recipes to favorite list 
+- User Can user their favorite recipes 
+
+
+
 ## Section list 
 - Navigation 
 - Banner
