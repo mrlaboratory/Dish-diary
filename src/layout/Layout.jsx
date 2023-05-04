@@ -1,6 +1,6 @@
 import React from 'react';
 
-const main = () => {
+const Layout = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const main = () => {
     );
 };
 
-export default main;
+export default Layout;

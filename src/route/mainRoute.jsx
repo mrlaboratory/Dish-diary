@@ -10,6 +10,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PriveteRoute";
 import FavoriteRevipes from "../pages/FavoriteRevipes";
+import User from "../pages/User";
 
 const mainRoute = createBrowserRouter([
     {
@@ -43,7 +44,11 @@ const mainRoute = createBrowserRouter([
         },
         {
           path:'/favorite',
-          element :<FavoriteRevipes></FavoriteRevipes>
+          element :<PrivateRoute><FavoriteRevipes></FavoriteRevipes></PrivateRoute>
+        },
+        {
+          path:'/user',
+          element :<PrivateRoute><User></User></PrivateRoute>
         }
       
       ]

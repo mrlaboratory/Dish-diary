@@ -58,7 +58,7 @@ const FavoriteRevipes = () => {
 
                     }
                     {
-                        favoItem.length == 0 ? 'There is a no favorite item' : ''
+                        favoItem.length == 0 ? <h2 className='text-xl my-10 font-bold text-color'>There is a no favorite item</h2> : ''
                     }
                 </div>
             </div>

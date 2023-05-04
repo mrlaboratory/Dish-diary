@@ -54,8 +54,8 @@ const Navbar = () => {
        {user ?  <button onClick={signOutUser} className="btn-primary btn">Logout</button> : <Link className="btn-primary btn" to='/login'>Login</Link>}
        
        {
-        user &&  <div className=' tooltip tooltip-left' data-tip={user.displayName}><img  className='w-12 ml-3 rounded-full border-2 border-[#FF0000] ' src={user.photoURL} alt="" />
-        </div>
+        user &&  <Link  to='/user' className=' tooltip tooltip-left' data-tip={user.displayName}><img  className='w-12 ml-3 rounded-full border-2 border-[#FF0000] ' src={user.photoURL} alt="" />
+        </Link>
        }
         
       </div>

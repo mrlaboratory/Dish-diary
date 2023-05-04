@@ -65,7 +65,10 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unsub = onAuthStateChanged(auth, currentUser => {
-            setUser(currentUser)
+
+                setUser(currentUser)
+
+
             setLoading(false)
         })
         return () => {
@@ -75,6 +78,7 @@ const AuthProvider = ({ children }) => {
 
 
     const info = {
+        auth,
         user,
         chefs,
         recipes,
