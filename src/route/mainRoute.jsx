@@ -11,6 +11,7 @@ import Register from "../pages/Register";
 import PrivateRoute from "./PriveteRoute";
 import FavoriteRevipes from "../pages/FavoriteRevipes";
 import User from "../pages/User";
+import Layout from "../layout/Layout";
 
 const mainRoute = createBrowserRouter([
     {
@@ -54,10 +55,16 @@ const mainRoute = createBrowserRouter([
       ]
     },
     {
-      path:'/chefrecipes/:id',
-      element : <PrivateRoute><ChefRecipes></ChefRecipes></PrivateRoute>,
+      path :'/',
+      element : <Layout></Layout>,
       errorElement : <ErrorPage></ErrorPage>,
-      loader : ({params}) => fetch(`https://dish-diary-server.vercel.app/chefrecipes/${params.id}`)
+      children : [
+        {
+          path:'/chefrecipes/:id',
+          element : <PrivateRoute><ChefRecipes></ChefRecipes></PrivateRoute>,
+          loader : ({params}) => fetch(`https://dish-diary-server.vercel.app/chefrecipes/${params.id}`)
+        }
+      ]
     }
   ])
   

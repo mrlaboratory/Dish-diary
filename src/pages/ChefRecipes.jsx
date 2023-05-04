@@ -37,9 +37,7 @@ const ChefRecipes = () => {
 
             <div className='headerbg border-b-2 border-gray-200'>
                 <div className=' relative'>
-                    <div className=' text-gray-600 rounded-lg '>
-                        <Header></Header>
-                    </div>
+                   
                     <div className='container mx-auto '>
 
                         <div className='grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-5 '>
@@ -80,11 +78,7 @@ const ChefRecipes = () => {
 
 
             </div>
-            <div className='bg-white mt-10'>
-                <div className='container mx-auto'>
-                    <Footer></Footer>
-                </div>
-            </div>
+          
         </div>
     );
 };
