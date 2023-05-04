@@ -65,26 +65,26 @@ const User = () => {
 
     return (
         <div className='w-full'>
-            <div className='flex justify-center items-center p-10 gap-5'>
-                <div className='w-[100px] rounded-full border-2 border-[#D54215] overflow-hidden'>
+            <div className='flex flex-col md:flex-row  justify-center items-center p-10 gap-5'>
+                <div className='w-[100px] rounded-full border-2 border-[#D54215] overflow-hidden  '>
                     <img className='w-full' src={user.photoURL} alt="" />
                 </div>
-                <h2 className='text-3xl font-bold'>Hello <span className='text-[#D54215]'> {user.displayName ? user.displayName : 'User'}  </span>!!</h2>
+                <h2 className='text-3xl font-bold text-center' >Hello <span className='text-[#D54215]'> {user.displayName ? user.displayName : 'User'}  </span>!!</h2>
               
                
             </div>
             <div className='container mx-auto p-5 grid grid-cols-1 md:grid-cols-2 gap-5'>
-                <div className='rounded-lg bg-white p-5'>
+                <div className='rounded-lg bg-white p-5 flex flex-col justify-center items-center'>
                     <h2 className='text-center text-3xl font-bold py-5'>User details </h2>
-                    <div className='text-lg mx-auto'>
+                    <div className='text-lg mx-auto flex flex-col justify-center items-center'>
                         <h3> Name : {user.displayName ? user.displayName : 'User'}</h3>
                         <h3>Email : {user.email}</h3>
                         {user.emailVerified ? <h3 className='text-green-600 font-bold'>Your email is Verified</h3> : <><h3 className='text-red-600 font-bold'>Please verify your email</h3>
-                            <button onClick={sendVrification} className='btn btn-primary my-3'>Send verification email</button> <br />
+                            <button onClick={sendVrification} className='btn btn-primary '>Send verification email</button> <br />
                         </>}
-                        <Link to='/favorite' className='btn btn-primary mt-3'>Your favorite recipes</Link> <br />
+                        <Link to='/favorite' className='btn btn-primary '>Your favorite recipes</Link> <br />
                         {/* The button to open modal */}
-                        <label htmlFor="my-modal" className='btn btn-primary mt-3'>Reset Password</label>
+                        <label htmlFor="my-modal" className='btn btn-primary '>Reset Password</label>
 
                         {/* Put this part before </body> tag */}
                         <input type="checkbox" id="my-modal" className="modal-toggle" />
