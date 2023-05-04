@@ -33,10 +33,15 @@ const Register = () => {
 
         const form = e.target
         const email = form.email.value
-        const name = form.name.value
+        const name = form.name.value ? form.name.value : 'User'
         const photo = form.photo.value || 'https://mrlaboratory.github.io/img/user.png'
         const password1 = form.password1.value
         const password2 = form.password2.value
+
+        if(password1.length < 6 || password1.length < 6){
+            setError('Password should be at least 6 characters')
+            return
+        }
 
 
 
@@ -80,7 +85,7 @@ const Register = () => {
                     <form onSubmit={signUpUser} className="card-body p-0 w-full sm:w-96">
                         <div className="form-control">
 
-                            <input required type="text" placeholder="Your full name " name='name' className="input input-bordered" />
+                            <input  type="text" placeholder="Your full name " name='name' className="input input-bordered" />
                         </div>
                         <div className="form-control">
 
