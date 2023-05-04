@@ -9,6 +9,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PriveteRoute";
+import FavoriteRevipes from "../pages/FavoriteRevipes";
 
 const mainRoute = createBrowserRouter([
     {
@@ -39,6 +40,10 @@ const mainRoute = createBrowserRouter([
         {
           path: '/contact',
           element : <Contact></Contact>
+        },
+        {
+          path:'/favorite',
+          element :<FavoriteRevipes></FavoriteRevipes>
         }
       
       ]

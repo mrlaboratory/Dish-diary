@@ -14,7 +14,13 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         fetch('https://dish-diary-server.vercel.app/chef')
             .then(res => res.json())
-            .then(d => setChefs(d.slice(0, 9)))
+            .then(d => setChefs(d))
+    }, [])
+    const [recipes, setRecipes] = useState([])
+    useEffect(() => {
+        fetch('https://dish-diary-server.vercel.app')
+            .then(res => res.json())
+            .then(d => setRecipes(d))
     }, [])
 
     useEffect(() => {
@@ -71,6 +77,7 @@ const AuthProvider = ({ children }) => {
     const info = {
         user,
         chefs,
+        recipes,
         createUser,
         loginUser,
         signOutUser,
