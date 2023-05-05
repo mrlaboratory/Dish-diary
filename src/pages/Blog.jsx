@@ -8,6 +8,9 @@ const options = {
     unit: 'in',
     format: [8.5, 11],
   };
+
+
+  // this is blog page 
 const Blog = () => {
     return (
 

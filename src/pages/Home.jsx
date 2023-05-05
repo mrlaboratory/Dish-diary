@@ -5,6 +5,9 @@ import Categories from '../components/Categories';
 import GetUpdate from '../components/GetUpdate';
 import Reviews from '../components/Reviews';
 
+
+
+// this is home  page 
 const Home = () => {
     return (
         <div>

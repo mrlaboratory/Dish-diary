@@ -8,6 +8,9 @@ import { AiFillGithub } from 'react-icons/Ai';
 import { toast } from 'react-hot-toast';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
+
+
+// this is register page 
 const Register = () => {
 
     const { user, createUser,loginWithGoogle , loginWithGithub, path} = useContext(AuthContext)

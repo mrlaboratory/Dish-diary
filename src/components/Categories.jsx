@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+// this is categories section 
 const Categories = () => {
     return (
         <div className='mt-5'>

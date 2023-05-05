@@ -3,6 +3,8 @@ import recipeImage from '/img/recipe.png'
 import { AiOutlineArrowRight } from 'react-icons/Ai';
 import { HashLink } from 'react-router-hash-link';
 
+
+// this is banner section 
 const Banner = () => {
     return (
         <div className='p-5'>

@@ -4,6 +4,9 @@ import Header from '../components/Header';
 import { Link, useRouteError } from 'react-router-dom';
 import Footer from '../components/Footer';
 
+
+
+// this is error page 
 const ErrorPage = () => {
     const error = useRouteError()
     console.log(error)

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// this is getupdate or subscription section 
 const GetUpdate = () => {
     return (
         <div className='getupdate'>

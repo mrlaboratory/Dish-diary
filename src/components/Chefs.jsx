@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Chef from './Chef';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
-
+// this is chefs section 
 const Chefs = () => {
  const {chefs} = useContext(AuthContext)
  

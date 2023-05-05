@@ -7,6 +7,8 @@ import { useState } from 'react';
 import { sendEmailVerification, sendPasswordResetEmail, updateEmail, updateProfile } from 'firebase/auth';
 import { toast } from 'react-hot-toast';
 
+
+// this is user page 
 const User = () => {
     const { auth, user } = useContext(AuthContext)
 

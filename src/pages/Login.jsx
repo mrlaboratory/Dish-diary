@@ -6,6 +6,9 @@ import { AiFillGithub } from 'react-icons/Ai';
 import { toast } from 'react-hot-toast';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
+
+
+// this is login page 
 const Login = () => {
 
   const { user, loginUser, loginWithGoogle , loginWithGithub } = useContext(AuthContext)

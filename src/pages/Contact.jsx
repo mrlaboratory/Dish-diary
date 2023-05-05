@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+
+// this is contact page 
 const Contact = () => {
     return (
         <div className='container mx-auto py-10 '>

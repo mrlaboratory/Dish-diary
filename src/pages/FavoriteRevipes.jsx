@@ -5,6 +5,9 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { getDbData, removeFromDb } from '../utils/db';
 
+
+
+// this is favorite recipes page 
 const FavoriteRevipes = () => {
     const { recipes } = useContext(AuthContext)
     const [favoItem, setFavoItem] = useState([])
